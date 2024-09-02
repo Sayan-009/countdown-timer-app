@@ -58,6 +58,12 @@ button:hover{
     gap: 1rem;
 }
 
+@media (max-width: 350px)  {
+    .time > p{
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 550px)  {
     body{
         display: block;
@@ -70,8 +76,4 @@ button:hover{
     }
 }
 
-@media (max-width: 400px)  {
-    .time > p{
-        font-size: 1.5rem;
-    }
-}
+
