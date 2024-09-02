@@ -23,9 +23,6 @@ function App() {
       m: time.Minute < 10 ? `0${time.Minute}` : `${time.Minute}`,
       s: time.Second < 10 ? `0${time.Second}` : `${time.Second}`,
     });
-    console.log(
-      time.Day + ":" + time.Hour + ":" + time.Minute + ":" + time.Second
-    );
     if (start) {
       const intervalId = setInterval(() => {
         if (time.Second !== 0) {
