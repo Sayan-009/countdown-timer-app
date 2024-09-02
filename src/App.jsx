@@ -161,7 +161,7 @@ function App() {
           }}
           style={{ backgroundColor: !start ? "green" : "red"}}
         >
-          {!start ? "Start" : "Stop"}
+          {!start ? "start" : "stop"}
         </button>
         <button
           onClick={() => {
