@@ -69,6 +69,7 @@ function App() {
                   time.Second === 0
                 ) {
                   setStart(!start);
+                  setRestart(true)
                 }
               }
             }
