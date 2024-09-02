@@ -159,6 +159,7 @@ function App() {
               setStart(false);
             }
           }}
+          style={{ backgroundColor: !start ? "green" : "red"}}
         >
           {!start ? "Start" : "Stop"}
         </button>
