@@ -69,7 +69,7 @@ function App() {
                   time.Second === 0
                 ) {
                   setStart(!start);
-                  setRestart(true)
+                  setRestart(true);
                 }
               }
             }
@@ -85,52 +85,61 @@ function App() {
   function Form() {
     return (
       <div className="form">
-        <div>
+        <div className="first">
           <label htmlFor="day">Day </label>
-          <input
+          <select
             id="day"
-            type="number"
-            min={0}
             value={time.Day}
             onChange={(e) => setTime({ ...time, Day: e.target.value })}
-            disabled={start}
-          />
+          >
+            {Array.from(Array(366), (_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
         </div>
-        <div>
+        <div className="first">
           <label htmlFor="hour">Hour </label>
-          <input
+          <select
             id="hour"
-            type="number"
-            min={0}
-            max={23}
-            value={time.Hour}
+             value={time.Hour}
             onChange={(e) => setTime({ ...time, Hour: e.target.value })}
-            disabled={start}
-          />
+          >
+            {Array.from(Array(24), (_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
         </div>
-        <div>
+        <div className="first">
           <label htmlFor="minute">Minute </label>
-          <input
+          <select
             id="minute"
-            type="number"
-            min={0}
-            max={59}
             value={time.Minute}
             onChange={(e) => setTime({ ...time, Minute: e.target.value })}
-            disabled={start}
-          />
+          >
+            {Array.from(Array(60), (_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
         </div>
-        <div>
+        <div className="first">
           <label htmlFor="second">Second </label>
-          <input
-            id="second"
-            type="number"
-            min={0}
-            max={59}
+          <select
+          id="second"
             value={time.Second}
             onChange={(e) => setTime({ ...time, Second: e.target.value })}
-            disabled={start}
-          />
+          >
+            {Array.from(Array(60), (_, i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
     );
@@ -160,7 +169,7 @@ function App() {
               setStart(false);
             }
           }}
-          style={{ backgroundColor: !start ? "green" : "red"}}
+          style={{ backgroundColor: !start ? "green" : "red" }}
         >
           {!start ? "Start" : "Stop"}
         </button>
