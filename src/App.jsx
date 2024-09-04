@@ -103,7 +103,7 @@ function App() {
           <label htmlFor="hour">Hour </label>
           <select
             id="hour"
-             value={time.Hour}
+            value={time.Hour}
             onChange={(e) => setTime({ ...time, Hour: e.target.value })}
           >
             {Array.from(Array(24), (_, i) => (
@@ -130,7 +130,7 @@ function App() {
         <div className="first">
           <label htmlFor="second">Second </label>
           <select
-          id="second"
+            id="second"
             value={time.Second}
             onChange={(e) => setTime({ ...time, Second: e.target.value })}
           >
@@ -181,7 +181,7 @@ function App() {
             setCurrTime({ d: "00", h: "00", m: "00", s: "00" });
           }}
         >
-          Restart
+          Resume
         </button>
       </div>
     </div>
